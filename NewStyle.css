@@ -1,0 +1,142 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;}
+.containerMensaje{
+    width: 100%;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content:space-around;
+}
+
+.btnEnviar:disabled{
+    background-color: rgb(140, 140, 140);
+    transition: .5s;
+}
+
+.btnEnviar:disabled:hover{
+    cursor:default;
+}
+
+.mensaje{
+    height: 40%;
+    width: 50%;
+    display:flex;
+    background-color: rgb(35, 35, 35);
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 10px;
+}
+.mensajeM{
+    height: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+}
+.btnEnviar{
+    height: 5em;
+    width: 25em;
+    font-size: 1em;
+    font-weight: 900;
+    color: white;
+    border: none;
+    border-radius: .5em;
+    margin-top: 1em;
+    letter-spacing: 1px;
+    background-color: rgb(66, 66, 66);
+}
+
+.btnEnviar:hover{
+    cursor: pointer;
+}
+
+.containerComentario{
+    height: 25em;
+    width: 100%;
+}
+
+.cajaM{
+    height: 6em;
+    width: 50%;
+    max-width:750px;
+    background-color: rgb(66, 66, 66);
+    position: relative;
+    top: 20px;
+    left: 50px;
+    border-radius: 10px;
+    border-top-left-radius:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.cajaM::before{
+    content:'';
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: -40px;
+    top:8px;
+    display: block;
+    border-right: 40px solid rgb(66, 66, 66);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    
+}
+
+.containMsg{
+    height: 75%;
+    width: 90%;
+    max-width: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5px;
+}
+
+.borrarMsg{
+    height: 75%;
+    width: 10%;
+    max-width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tacho */
+.fa-trash:before {
+    content: "\f1f8";
+    color: white;
+    font-size: 35px;
+}
+
+.fa-trash:hover::before {
+    content: "\f1f8";
+    color: red;
+    cursor: pointer
+    ;
+}
+
+.cm{
+    height: 100%;
+    width: 90%;
+    overflow-x: auto;
+    font-size: 1em;
+}
+
+.hora{
+    height: 100%;
+    width: 8%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: black;
+    font-size: .9em;
+}

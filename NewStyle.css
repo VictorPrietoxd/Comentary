@@ -22,6 +22,7 @@ box-sizing: border-box;}
 .mensaje{
     height: 40%;
     width: 50%;
+    max-width:750px;
     display:flex;
     background-color: rgb(35, 35, 35);
     justify-content: space-around;

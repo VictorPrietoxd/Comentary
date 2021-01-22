@@ -1,6 +1,9 @@
 let mensaje = document.querySelector('.mensajeM'),
 btnEnviar = document.getElementById('btnEnviar'),
 containerC = document.querySelector('.comentario');
+
+
+
 DomLoaded();
 
 
@@ -53,6 +56,9 @@ horaC = `${hora.getHours()}:${hora.getMinutes()}`;
 function validacion(){
     if (mensaje.value !== '') {
         btnEnviar.disabled = false
+    }
+    else {
+        btnEnviar.disabled = true
     }
 }
 

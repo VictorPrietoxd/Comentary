@@ -12,7 +12,6 @@ box-sizing: border-box;}
 
 .btnEnviar:disabled{
     background-color: rgb(140, 140, 140);
-    transition: .5s;
 }
 
 .btnEnviar:disabled:hover{

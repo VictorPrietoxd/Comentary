@@ -51,14 +51,16 @@ horaC = `${hora.getHours()}:${hora.getMinutes()}`;
     
     borrarComentario(cajaM)
     btnDisabled(btnEnviar);
+    let mp = mensaje.value;
+    console.log(mp.split(''))
 }
 
 function validacion(){
-    if (mensaje.value !== '') {
-        btnEnviar.disabled = false
+    if (mensaje.value.length === 0 || mensaje.value.length === 1) {
+        btnEnviar.disabled = true
     }
     else {
-        btnEnviar.disabled = true
+        btnEnviar.disabled = false
     }
 }
 

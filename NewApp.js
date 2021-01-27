@@ -9,12 +9,16 @@ DomLoaded();
 
 function DomLoaded() {
 
-    document.addEventListener('DOMContentLoaded',btnDisabled);
-    
+    document.addEventListener('DOMContentLoaded',btnDisabled);    
     btnEnviar.addEventListener('click', enviarComentario);
     btnEnviar.addEventListener('click', resetText);
-    mensaje.addEventListener('keydown',validacion)
-
+    mensaje.addEventListener('keyup',validacion);
+    mensaje.onkeypress=function(e){
+        if(e.key=='Enter'){
+            enviarComentario();
+            resetText();
+        }
+    }
     
 }
 
@@ -22,8 +26,9 @@ function DomLoaded() {
 
 function enterChar(e){
     e.preventDefault();
-    if (e.key === 'enter') {
+    if (e.key == 'Enter') {
         enviarComentario();
+        resetText();
     }
 }
 
@@ -56,11 +61,11 @@ horaC = `${hora.getHours()}:${hora.getMinutes()}`;
 }
 
 function validacion(){
-    if (mensaje.value.length === 0 || mensaje.value.length === 1) {
-        btnEnviar.disabled = true
+    if (mensaje.value.length>0) {
+        btnEnviar.disabled = false;
     }
     else {
-        btnEnviar.disabled = false
+        btnEnviar.disabled = true
     }
 }
 
@@ -74,12 +79,14 @@ function borrarComentario(cajaM){
 
 }
 
-function resetText(e){
+function resetText(){
+    /*
     e.preventDefault();
 
     if (e.target.classList.contains('btnEnviar')) {
        mensaje.value=''
-    }
+    }*/
+    mensaje.value="";
 
 }
 
